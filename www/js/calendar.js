@@ -24,11 +24,11 @@ var app = angular.module('ionic-calendar', ['ionic'])
         templateUrl: "templates/menu.html",
         controller: 'CalendarEventController'
     })
-        .state('app.demo1', {
-            url: "/demo1",
+        .state('app.myCalendar', {
+            url: "/myCalendar",
             views: {
                 'menuContent': {
-                    templateUrl: "templates/demo1.html"
+                    templateUrl: "templates/myCalendar.html"
                 }
             }
         })
@@ -41,7 +41,7 @@ var app = angular.module('ionic-calendar', ['ionic'])
             }
         })
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/demo1');
+    $urlRouterProvider.otherwise('/app/myCalendar');
 });
 
 app.service("EventService",
